@@ -1,7 +1,3 @@
-# require './app'
-#
-# run Sinatra::Application
-
 require 'sinatra/base'
 
 require('./controllers/application')

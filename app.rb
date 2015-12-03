@@ -18,5 +18,5 @@ get '/login' do
 end
 
 get '/signup' do
-  erb :signup
+  erb :sign_up
 end
