@@ -1,10 +1,14 @@
 <h2>Your Shopping List</h2>
 
 <% if @message %>
-  <strong><%= @message %></strong>
+ <li><%= @message %></li>
 <% end %>
 
 <li><a href='/create'>Add an Item</a></li>
+<% if @message %>
+ <li><%= @message %></li>
+<% end %>
+
 
 <table>
   <thead>

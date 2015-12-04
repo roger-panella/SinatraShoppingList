@@ -17,7 +17,7 @@ class ItemController < ApplicationController
     @message = 'Item added to shopping list!'
     erb :message
   end
-
+  
   get '/update/:id' do
     @item = Item.find(params[:id])
     erb :update
