@@ -1,6 +1,8 @@
 class ItemController < ApplicationController
 
   get '/' do
+    authorization_check
+    @user_name = session[:current_user].user_name
     @items = Item.all
     erb :read
   end
@@ -17,7 +19,7 @@ class ItemController < ApplicationController
     @message = 'Item added to shopping list!'
     erb :message
   end
-  
+
   get '/update/:id' do
     @item = Item.find(params[:id])
     erb :update

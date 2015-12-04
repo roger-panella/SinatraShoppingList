@@ -11,12 +11,16 @@ def does_user_exist(username)
   end
 end
 
-def authorization_check
-  if session[:current_user] == nil
-    redirect '/not_authorized'
-  else
-    return true
-  end
+# def authorization_check
+#   if session[:current_user] == nil
+#     redirect '/not_authorized'
+#   else
+#     return true
+#   end
+# end
+
+get '/not_authorized' do
+  erb :not_authorized
 end
 
   get '/login' do
@@ -26,12 +30,11 @@ end
   post '/login' do
     user = Account.authenticate(params[:user_name], params[:password])
       if user
-        @message = 'Welcome back!'
         session[:current_user] = user
         redirect '/'
       else
         # @message = 'NO! Try again'
-        # erb :login
+        erb :login
         redirect '/account/register'
       end
     end
@@ -42,7 +45,7 @@ end
 
   post '/register' do
     if does_user_exist(params[:user_name]) == true
-      return {:message => 'User already exists!'}.to_json
+      redirect '/account/already_exists'
     end
     user = Account.create(user_email: params[:user_email], user_name: params[:user_name], password: params[:password])
     session[:current_user] = user
@@ -50,9 +53,18 @@ end
   end
 
   get '/logout' do
-  # authorization_check
+  authorization_check
   session[:current_user] = nil
-  redirect '/'
+  erb :logout
 end
+
+
+  get '/already_exists' do
+    erb :already_exists
+  end
+
+
+
+
 
 end

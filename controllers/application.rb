@@ -15,6 +15,16 @@ set :public_dir, File.expand_path('../../public', __FILE__)
 #   erb :read
 # end
 
+
+def authorization_check
+  # if session[:current_user] == nil
+  if 0 == 1
+    redirect '/account/not_authorized'
+  else
+    return true
+  end
+end
+
   not_found do
     erb :not_found
   end
