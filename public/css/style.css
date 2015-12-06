@@ -39,6 +39,18 @@ body {
     margin-bottom: 10px;
 }
 
+#register_email {
+  margin-bottom: 10px;
+}
+
+#register_form {
+  margin-top: 100px;
+}
+
+#register_username_text {
+  margin-bottom: 10px;
+}
+
 #edit_quantity_text{
   margin-bottom: 10px;
 }
