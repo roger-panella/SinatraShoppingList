@@ -9,7 +9,54 @@ body {
   margin-right: 100px;
 }
 
+#update_item_form {
+  margin-top: 100px;
+}
 
+#login_form {
+  margin-top: 100px;
+}
+
+#add_item_form {
+  margin-top: 100px;
+}
+
+.form_background {
+    background-color: rgb(196, 205, 209);
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#item_to_edit{
+  margin-bottom: 10px;
+}
+
+#add_item_text{
+  margin-bottom: 10px;
+}
+
+#add_item_quantity_text{
+    margin-bottom: 10px;
+}
+
+#edit_quantity_text{
+  margin-bottom: 10px;
+}
+
+#delete_form {
+  margin-top: 100px;
+}
+#input_email {
+  margin-bottom: 10px;
+}
+
+#destroy_heading {
+  margin-bottom: 20px;
+}
+
+#input_password {
+  margin-bottom: 10px;
+}
 /*Login Page*/
 .form-signin {
   max-width: 330px;

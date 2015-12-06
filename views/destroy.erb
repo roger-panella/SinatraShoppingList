@@ -9,13 +9,16 @@
   <input type="submit" value="Delete Item">
 </form> -->
 <div class="container">
-
+  <div class="form_background">
+  <div id="delete_form">
   <form class="form-signin" action="/destroy" method="post">
-    <h2 class="form-signin-heading">Delete <%= @item.name %>?</h2>
+    <h2 id="destroy_heading" class="form-signin-heading">Delete <%= @item.name %>?</h2>
     <input type="hidden" name="id" value="<%= @item.id %>">
     <button class="btn btn-lg btn-primary btn-block" type="submit">Delete Item</button>
     </div>
     <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
   </form>
+</div>
+</div>
 
 </div> <!-- /container -->
