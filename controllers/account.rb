@@ -1,6 +1,6 @@
 class AccountController < ApplicationController
 
-enable :sessions
+# enable :sessions
 
 def does_user_exist(username)
   user = Account.find_by(:user_name => username)
@@ -13,15 +13,15 @@ end
 
 # def authorization_check
 #   if session[:current_user] == nil
-#     redirect '/not_authorized'
+#     redirect '/accounts/not_authorized'
 #   else
 #     return true
 #   end
 # end
 
-get '/not_authorized' do
-  erb :not_authorized
-end
+# get '/not_authorized' do
+#   erb :not_authorized
+# end
 
   get '/login' do
     erb :login
@@ -53,10 +53,11 @@ end
   end
 
   get '/logout' do
-  authorization_check
-  session[:current_user] = nil
-  erb :logout
-end
+    authorization_check
+    session[:current_user] = nil
+    # erb :logout
+    redirect '/'
+  end
 
 
   get '/already_exists' do

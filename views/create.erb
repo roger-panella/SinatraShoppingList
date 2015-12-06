@@ -1,9 +1,23 @@
-<h3>Add Items to Your Shopping List</h3>
+<!-- <h3>Add Items to Your Shopping List</h3> -->
 
-<p> What do you need to buy?</p>
+<!-- <p> What do you need to buy?</p>
 
 <form action="/create" method="post">
   <input type="text" name="name" placeholder="Item to buy">
   <input type="text" name="quantity" placeholder="How many?">
   <input type="submit">Add to Shopping List</input>
-</form>
+</form> -->
+
+<div class="container">
+  <form class="form-signin" action="/create" method="post">
+    <h2 class="form-signin-heading">Add an Item:</h2>
+    <label for="inputEmail" class="sr-only">Item</label>
+    <input type="text" name="name" id="inputEmail" class="form-control" placeholder="Item" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="ptext" name="quantity" id="inputPassword" class="form-control" placeholder="Quantity" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Add Item</button>
+    </div>
+    <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
+  </form>
+
+</div> <!-- /container -->

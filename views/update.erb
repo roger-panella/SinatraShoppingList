@@ -1,12 +1,28 @@
-<h2>Edit Item</h2>
+<!-- <h2>Edit Item</h2> -->
 
-<p>
-  Update item #<%= @item.id %>.
-<p>
 
-<form action="/update" method="post">
+<!-- <h3>Update <%= @item.name %>:</h3> -->
+
+
+<!-- <form action="/update" method="post">
    <input type="hidden" name="id" value="<%= @item.id %>">
    <input type="text" name="name" value="<%= @item.name %>">
    <input type="text" name="quantity" value="<%= @item.quantity %>">
    <input type="submit">Edit Item</input>
-</form>
+</form> -->
+
+<div class="container">
+
+  <form class="form-signin" action="/update" method="post">
+    <h2 class="form-signin-heading">Update <%= @item.name %>:</h2>
+    <label for="inputEmail" class="sr-only">Item</label>
+    <input type="hidden" name="id" value="<%= @item.id %>">
+    <input type="text" name="name" value="<%= @item.name %>" id="inputEmail" class="form-control" required autofocus>
+    <label for="inputPassword" class="sr-only">Quantity</label>
+    <input type="text" name="quantity" id="inputPassword" class="form-control" value="<%= @item.quantity %>" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Update Item</button>
+    </div>
+    <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
+  </form>
+
+</div> <!-- /container -->

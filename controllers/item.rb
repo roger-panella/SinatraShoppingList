@@ -1,11 +1,21 @@
 class ItemController < ApplicationController
 
+  # def authorization_check
+  #   if session[:current_user] == nil
+  #     redirect '/accounts/not_authorized'
+  #   else
+  #     return true
+  #   end
+  # end
+
   get '/' do
+    # if authorization_check == true
+    # session[:current_user] = 'jeff'
     authorization_check
-    @user_name = session[:current_user].user_name
+    # @user_name = session[:current_user].user_name
     @items = Item.all
     erb :read
-  end
+end
 
   get '/create' do
     erb :create
@@ -17,7 +27,7 @@ class ItemController < ApplicationController
     @item.quantity = params[:quantity]
     @item.save
     @message = 'Item added to shopping list!'
-    erb :message
+    redirect '/'
   end
 
   get '/update/:id' do
@@ -26,12 +36,13 @@ class ItemController < ApplicationController
   end
 
   post '/update' do
+    @message = "Item Updated!"
     @item = Item.find(params[:id])
     @item.name = params[:name]
     @item.quantity = params[:quantity]
     @item.save
-    @message = "Item modified!"
-    erb :message
+    # @message = "Item Updated!"
+    redirect '/'
   end
 
   get '/destroy/:id' do
@@ -43,7 +54,7 @@ class ItemController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy
     @message = 'Item deleted!'
-    erb :message
+    redirect '/'
   end
 
 end

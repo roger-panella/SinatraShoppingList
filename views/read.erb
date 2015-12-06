@@ -1,20 +1,30 @@
+
+<!--
+<% if @message %>
+ <li><%= @message %></li>
+<% end %>
+
+
+<% if @message %>
+ <li><%= @message %></li>
+<% end %> -->
+
+<div class="container">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="/">Home</a></li>
+    <!-- <li role="presentation"><a href="/create">Add An Item</a></li> -->
+    <li role="presentation"><a href="/account/logout">Logout</a></li>
+  </ul>
 <h2>Your Shopping List</h2>
-
-<% if @message %>
+<h3><% if @message %>
  <li><%= @message %></li>
-<% end %>
-
-<li><a href='/create'>Add an Item</a></li>
-<% if @message %>
- <li><%= @message %></li>
-<% end %>
-
-
-<table>
-  <thead>
-    <th>
+<% end %></h3>
+<!-- <li><a href='/create'>Add an Item</a></li> -->
+<table class="table">
+  <thead class="bg-white">
+    <!-- <th>
       ID
-    </th>
+    </th> -->
     <th>
       Item
     </th>
@@ -31,10 +41,10 @@
 
 <tbody>
   <% @items.each do |item| %>
-  <tr>
-    <td>
+  <tr class="warning">
+    <!-- <td>
       <%= item.id %>
-    </td>
+    </td> -->
     <td>
       <%= item.name %>
     </td>
@@ -42,15 +52,20 @@
       <%= item.quantity %>
     </td>
     <td>
-      <a href='/update/<%= item.id %>'>Change</a>
+      <a href='/update/<%= item.id %>'><span class="glyphicon glyphicon-pencil"></a>
     </td>
     <td>
-      <a href='/destroy/<%= item.id %>'>Delete</a>
+      <a href='/destroy/<%= item.id %>'><span class="glyphicon glyphicon-trash"></a>
     </td>
   </tr>
   <% end %>
-  <form class="" action="/account/logout">
-    <input type="submit" value="Logout">
-  </form>
   </tbody>
 </table>
+<!-- <form class="" action="/account/logout">
+  <input type="submit" value="Logout">
+</form> -->
+<!-- <form class="" action="/create">
+  <input type="submit" value="Add an Item">
+</form> -->
+ <p><a class="btn btn-default btn-xl" href="/create" role="button">Add Item</a></p>
+</div>
