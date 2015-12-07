@@ -126,6 +126,12 @@ th {
     margin-right: auto;
     border-radius: 25px;
 }
+
+#main_table {
+    background-color: rgb(178,141,115);
+    border-radius: 10px;
+}
+
 #item_to_edit{
   margin-bottom: 10px;
 }
