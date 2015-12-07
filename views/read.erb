@@ -9,17 +9,26 @@
  <li><%= @message %></li>
 <% end %> -->
 
-<div class="container">
-  <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="/">Home</a></li>
+<div id="read_page" class="container">
+
+  <!-- <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="/">Home</a></li> -->
     <!-- <li role="presentation"><a href="/create">Add An Item</a></li> -->
-    <li role="presentation"><a href="/account/logout">Logout</a></li>
+    <!-- <li role="presentation"><a href="/account/logout">Logout</a></li> -->
   </ul>
+
+<div id="main_heading">
 <h2>Your Shopping List</h2>
+</div>
+
+
 <h3><% if @message %>
  <li><%= @message %></li>
 <% end %></h3>
 <!-- <li><a href='/create'>Add an Item</a></li> -->
+<div class="row">
+
+<div class="col-lg-8">
 <table class="table">
   <thead class="bg-white">
     <!-- <th>
@@ -39,9 +48,10 @@
     </th>
   </thead>
 
-<tbody>
+<tbody id="table_body">
   <% @items.each do |item| %>
-  <tr class="warning">
+  <!-- <tr class="warning"> -->
+      <tr>
     <!-- <td>
       <%= item.id %>
     </td> -->
@@ -61,11 +71,20 @@
   <% end %>
   </tbody>
 </table>
+
+</div>
+<div class="col-lg-4" id="right_buttons">
+<a class="btn btn-xl" id="add_item_button" href="/create" role="button">Add Item</a>
+</div>
+<div class="col-lg-4" id="right_buttons">
+<a class="btn btn-xl" id="logout_button" href="/account/logout" role="button">Sign Out</a>
+</div>
+</div>
 <!-- <form class="" action="/account/logout">
   <input type="submit" value="Logout">
 </form> -->
 <!-- <form class="" action="/create">
   <input type="submit" value="Add an Item">
 </form> -->
- <p><a class="btn btn-default btn-xl" href="/create" role="button">Add Item</a></p>
+ <!-- <p><a class="btn btn-default btn-xl" href="/create" role="button">Add Item</a></p> -->
 </div>

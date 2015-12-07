@@ -1,12 +1,22 @@
 body {
-  background-color: rgb(212, 175, 106);
+  background-color: rgb(240, 254, 255);
   color: rgb(96, 132, 172);
 }
+
 
 #jumbo{
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
+  background-color: rgb(178,141,115);
+  border-radius: 25px;
+}
+
+table {
+  border-radius: 25px;
+}
+#not_authorized_page{
+  background-color: rgb(178,141,115);
 }
 
 #update_item_form {
@@ -17,15 +27,104 @@ body {
   margin-top: 100px;
 }
 
+td {
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(255,232,215);
+}
+
+tr {
+  /*background-color: rgb(240,254,255);*/
+}
+
 #add_item_form {
   margin-top: 100px;
 }
 
+#main_heading {
+  margin-top: 60px;
+  margin-left: 20%;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+}
+
+
+
+#right_buttons {
+  margin-top: 60px;
+}
+
+#logout_button {
+  margin-top: -20px;
+  width: 23%;
+  background-color: rgb(255,230,215);
+}
+
+#add_item_heading {
+  color: rgb(215,251,255);
+}
+
+#login_heading{
+  color: rgb(215,251,255);
+}
+
+#jumbo_headline {
+    color: rgb(215,251,255);
+}
+
+#jumbo_text {
+    color: rgb(215,251,255);
+}
+
+#jumbo_button_a {
+    background-color: rgb(255,232,215);
+}
+
+#add_item_button {
+      background-color: rgb(255,230,215);
+}
+
+#jumbo_button_b {
+  background-color: rgb(255,232,215);
+}
+
+#login_button {
+  background-color: rgb(255,232,215);
+}
+#add_button {
+  /*background-color: rgb(215,251,255);*/
+  background-color: rgb(255,232,215);
+}
+
+#signup_heading {
+    color: rgb(215,251,255);
+}
+
+#signup_button {
+    background-color: rgb(255,232,215);
+}
+
+#update_heading {
+    color: rgb(215,251,255);
+}
+
+#update_button {
+  background-color: rgb(255,232,215);
+}
+
+th {
+  background-color: rgb(178,141,115);
+    color: rgb(215,251,255);
+}
+
 .form_background {
-    background-color: rgb(196, 205, 209);
+    /*background-color: rgb(196, 205, 209);*/
+    background-color: rgb(178,141,115);
     width: 30%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 25px;
 }
 #item_to_edit{
   margin-bottom: 10px;
@@ -64,6 +163,11 @@ body {
 
 #destroy_heading {
   margin-bottom: 20px;
+  color: rgb(215,251,255);
+}
+
+#delete_button {
+  background-color: rgb(255,232,215);
 }
 
 #input_password {

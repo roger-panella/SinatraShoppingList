@@ -16,13 +16,13 @@
   <div class="form_background">
   <div id="update_item_form">
   <form class="form-signin" action="/update" method="post">
-    <h2 class="form-signin-heading">Update <%= @item.name %>:</h2>
+    <h2 class="form-signin-heading" id="update_heading">Update <%= @item.name %>:</h2>
     <label for="inputEmail" class="sr-only">Item</label>
     <input type="hidden" name="id" value="<%= @item.id %>">
     <input type="text" name="name" id="item_to_edit" value="<%= @item.name %>" id="inputEmail" class="form-control" required autofocus>
     <label for="inputPassword" class="sr-only">Quantity</label>
     <input type="text" id="edit_quantity_text" name="quantity" id="inputPassword" class="form-control" value="<%= @item.quantity %>" required>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Update Item</button>
+  <button class="btn btn-lg btn-block" id="update_button" type="submit">Update Item</button>
     <!-- </div> -->
     <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
   </form>

@@ -14,7 +14,7 @@
   <form class="form-signin" action="/destroy" method="post">
     <h2 id="destroy_heading" class="form-signin-heading">Delete <%= @item.name %>?</h2>
     <input type="hidden" name="id" value="<%= @item.id %>">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Delete Item</button>
+    <button id="delete_button" class="btn btn-lg btn-block" type="submit">Delete Item</button>
     </div>
     <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
   </form>
